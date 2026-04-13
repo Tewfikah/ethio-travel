@@ -1,8 +1,3 @@
-// ─── src/types/index.ts ──────────────────────────────────────────────
-// This file defines the SHAPE of our data
-// Think of it like a blueprint
-// Every destination MUST have these exact fields
-
 export interface Destination {
   id: number;
   title: string;
@@ -11,23 +6,16 @@ export interface Destination {
   image: string;
 }
 
-// Shape of a logged in user
 export interface AuthUser {
   id: string;
   name: string;
   email: string;
-  avatar?: string; // optional
+  avatar?: string;
 }
 
-// Shape of what AuthContext gives us
 export interface AuthContextType {
-  user: AuthUser | null; // null = not logged in
+  user: AuthUser | null;
   isLoggedIn: boolean;
   login: (user: AuthUser) => void;
   logout: () => void;
 }
-
-
-
-
-

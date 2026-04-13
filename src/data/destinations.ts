@@ -1,8 +1,18 @@
 // ─── src/data/destinations.ts ────────────────────────────────────────
-// All static data lives here
-// When backend is ready we ONLY change this file!
+//
+// 🧠 SIMPLE EXPLANATION:
+// All destination data lives here
+// We define the type HERE directly
+// No imports needed = no errors!
 
-import { Destination } from '../types';
+// Define the shape of destination directly here
+interface Destination {
+  id: number;
+  title: string;
+  sub: string;
+  rating: number;
+  image: string;
+}
 
 export const destinations: Destination[] = [
   {
@@ -35,7 +45,7 @@ export const destinations: Destination[] = [
   },
 ];
 
-// Nav links data
+// Nav links
 export const NAV_LINKS = ['News', 'Destinations', 'Blog', 'Contact'];
 
 export const ACTIVE_LINK = 'Destinations';
